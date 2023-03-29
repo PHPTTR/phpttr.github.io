@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="s.css">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt">
+    </head>
+   <body>
+    
+      
+      <!--ส่วนเนื้อหา-->
+      <center><div class="namecontent">
+        <div class="headcontent">
+        <span class="php">PHP</span><span class="namephp">Loop</span> 
+        </div>
+      </div>                   
+      </center>
+      
+      <div class="content">
+<diV class="contentphp"><h3>คำสั่งในการทำซ้ำหรือการวนลูป</h3>
+    <br>
+    <h4>1. for</h4>
+      
+      <p>for (1. กำหนดตัวแปรสำหรับเริ่มต้น $x; 2. สร้างเงื่อนไขถ้าตรงเงื่อนไขจะยังวนลูป $x<=10; 3. เพิ่มหรือลดค่าตัวแปรไปเรื่อยๆจนกว่าจะพ้นเงื่อนไข $x++) <br>{
+         คำสั่ง
+      }</p> 
+      <p>การทำงานจะเรียงลำดับดังนี้ <li>ขั้นแรกกำหนดค่า $x = 0;</li> <li>นำตัวแปรไปเปรียบเทียบในเงื่อนไขตามคำสั่ง $x<=10; ถ้าเป็นจริงให้ทำตามคำสั่งในบล็อก { } แต่ถ้าเป็นเท็จจึงจะออกจากการทำงานวนลูป</li></p> 
+      <p><li>เมื่อตรวจสอบเงื่อนไขว่าเป็นจริงแล้วทำงานตามคำสั่งในบล็อก { } </li></p>
+      <li>เมื่อทำงานตามคำสั่งในบล็อก { } จึงจะเพิ่มค่าตามคำสั่ง $x++ เมื่อเพิ่มค่าเสร็จจะวนลูปไปที่เงื่อนไขเพื่อเปรียบเทียบว่าเป็นจริงหรือเท็จ</li>
+      <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      
+        
+        <span class="phpkeywordcolor" style="color:mediumblue">for</span> ($x =<span class="phptagcolor" style="color:red">0</span>; $x>= <span class="phptagcolor" style="color:red">10</span>;
+         $x++) {
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"number is : $x <span class="phpstringcolor" style="color:brown">&lt;br&gt;"</span></span> ;
+       <br>}
+        <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+      
+      </div>
+    </div>
+    <br>
+    <h4>2. while</h4>
+    <p> while  (เงื่อนไข) <br>{
+        คำสั่ง
+      } </p>
+<p>การทำงานจะเรียงลำดับดังนี้ 
+    <li>กำหนดตัวแปร $x=10;</li> 
+    <li>เมื่อวนลูปจะนำตัวแปรไปเปรียบเทียบเงื่อนไขตามคำสั่ง $x>=0 ถ้าเป็นจริงให้ทำตามคำสั่งในบล็อก { }</li> </p>
+    <li>เมื่อทำตามคำสั่งในบล็อก { } แล้วจึงจดลงค่าตัวแปรทีละหนึ่งตามคำสั่ง $x--;</li>  
+    <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      
+        $x= <span class="phptagcolor" style="color:red">10</span>; <br>
+        <span class="phpkeywordcolor" style="color:mediumblue">while</span> ($x>= <span class="phptagcolor" style="color:red">0</span> ) {
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"number is : $x <span class="phpstringcolor" style="color:brown">&lt;br&gt;"</span></span> ;
+       <br>$x--;
+        <br>}
+        <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+      
+      </div>
+    </div>
+
+    <br>
+    <h4>3. do while</h4>
+    <p>คำสั่ง do while จะทำงานในลักษณะ ทำก่อนแล้วเช็คเงื่อนไขทีหลัง</p>
+    <p> do {
+        <br>คำสั่ง 
+        <br>$x++;
+      <br>} </p>
+      <p> while  (เงื่อนไข) </p>
+<p>การทำงานจะเรียงลำดับดังนี้ 
+    <li>กำหนดตัวแปร $x=1;</li> 
+    <li>คำสั่ง do คือสั่งให้ทำก่อนหนึ่งครั้ง คือ print ค่าออกมา แล้วจึงเพิ่มค่าตัวแปรทีละหนึ่งตามคำสั่ง $x++;</li> </p>
+    <li>เมื่อเพิ่มค่าตัวแปรเสร็จจะไปเช็คเงื่อนไขในลูป while ว่าเป็นจริงหรือเท็จ ถ้าเป็นจริงจะย้อนกลับไปทำในลูป do</li>  
+    <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      
+        $x= <span class="phptagcolor" style="color:red">1;</span> <br>
+        <span class="phpkeywordcolor" style="color:mediumblue">do</span> {
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"number is : $x <span class="phpstringcolor" style="color:brown">&lt;br&gt;"</span></span> ;
+       <br>$x++;
+        <br>}
+        <br><span class="phpkeywordcolor" style="color:mediumblue">while($x<=<span class="phptagcolor" style="color:red">10</span>)</span>
+        <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+      
+      </div>
+    </div>
+
+</diV><!--ปิด div contentphp-->
+    </div><!--ปิด div content-->
+
+      
+      
+   </body>
+</html>

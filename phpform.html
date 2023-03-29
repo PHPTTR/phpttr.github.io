@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="s.css">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt">
+    </head>
+   <body>
+    
+      
+      <!--ส่วนเนื้อหา-->
+    
+      <center>
+        <div class="namecontent">
+        <div class="headcontent">
+        <span class="php">PHP</span><span class="namephp">Form</span> 
+        </div>
+      </div>                   
+      </center>
+      
+      <div class="content">
+        <diV class="contentphp"><h3>การรับค่าข้อมูลและส่งผ่านฟอร์มไปประมวลผลไฟล์ที่กำหนด</h3>
+      <h4>1. form</h4>
+      
+      <p>ในส่วนของแท็ก form จะมี 2 คำสั่งที่เกี่ยวข้องกับการทำงาน ทำให้ form สามารถส่งข้อมูลไปหาไฟล์ที่ต้องการได้ ซึ่งก็คือคำสั่ง action และ method</p>
+      <p>action ไฟล์ที่รับข้อมูลจากฟอร์มเพื่อไปประมวลผล action="data.php"</p>
+      <p>method คือ การระบุรูปแบบการสื่อสารข้อมูล มี 2 ประเภทหลัก คือ POST และ GET</p>
+      <li>POST เหมาะกับการส่งข้อมูลผ่าน form, ข้อมูลที่ต้องการความปลอดภัย, ข้อมูลรูปภาพ และข้อมูลขนาดใหญ่</li>
+      <li>GET เหมาะกับการส่งข้อมูลไม่เยอะ ไม่เน้นความปลอดภัย เพราะการส่งแบบ GET ข้อมูลจะเป็นส่วนหนึ่งของ URL ของเว็บไซต์เรียกว่า Query string</li>
+      
+      <br>
+      <h4>2. input</h4>
+      <p>เมื่อมีคำสั่งในการส่งข้อมูลผ่านฟอร์มและวิธีการส่งแล้วจะต้องมีเครื่องมือในการรับข้อมูล ซึ่งก็คือคำสั่ง &lt;input type="text" name="example"&gt;</p>
+      <li>input มีหลากหลายประเภทในการรับข้อมูลเข้ามา type=" " text checkbox radio file password</li>
+      <li>name="example" ระบุชื่อของค่าที่รับเข้ามาผ่านฟอร์มมีชื่อว่าอะไร เมื่อส่งข้อมูลที่รับเข้ามาไปประมวลผล ไฟล์ที่ประมวลผลจึงรับค่าที่ส่งมาโดยอ้างอิงจากชื่อของค่าที่ส่ง</li>
+      <br><h3>ประเภทของ input เบื้องต้น</h3>
+      <li>input type text</li>
+      <p>รูปแบบการใช้งาน</p>
+      <div class="examcode">
+        <div class="w3-exampl">
+      <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="username"</span>&gt;</span>
+      
+      </div>
+      </div>
+     <p>ผลลัพธ์</p>
+      <table>
+      <tr>
+        <td>username</td>
+        <td><input class="input" type="text"></td>
+        
+      </tr>
+    </table>
+      
+    <br>
+    <li>input type password</li>
+    <p>รูปแบบการใช้งาน</p>
+    <div class="examcode">
+      <div class="w3-exampl">
+    <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="password"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="password"</span>&gt;</span>
+      </div>
+      </div>
+      <p>ผลลัพธ์</p>
+    <table>
+      <tr>
+        <td>password</td>
+        <td><input type="password"></td>
+      </tr>
+    </table>
+      
+      <br>
+      <li>input type radio</li>
+      <p>รูปแบบการใช้งาน</p>
+      <div class="examcode">
+        <div class="w3-exampl">  
+      <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="radio"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="sex</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="male"</span>&gt;</span><span>male</span>
+      <br><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="radio"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="sex"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="female"</span>&gt;</span><span>female</span>  
+    </div>
+      </div>
+      
+      <p>ผลลัพธ์</p>
+      <table>
+      <tr>
+        <td><INPUT TYPE="radio" value="male" name="sex">male</td>
+        <td><INPUT TYPE="radio" value="female" name="sex">female</td>
+      </tr>
+    </table>
+    
+    <br>
+      <li>input type checkbox</li>
+      <p>รูปแบบการใช้งาน</p>
+      <div class="examcode">
+        <div class="w3-exampl"> 
+      <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langHTML"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="HTML"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">HTML</span></span>
+      <br><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langCSS"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="CSS"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">CSS</span></span>
+      <br><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langJAVA"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="JAVA Script"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">JAVA Script</span></span>
+      <br><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langPHP"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="PHP"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">PHP</span>
+      </div>
+      </div>
+      
+      <p>ผลลัพธ์</p>
+      <table>
+        <tr>
+          <td><INPUT TYPE="checkbox"  value="HTML" name="language">HTML</td>
+          <td><INPUT TYPE="checkbox"  value="PHP" name="language">CSS</td>
+          <td><INPUT TYPE="checkbox"  value="PHP" name="language">JAVA Script</td>
+          <td><INPUT TYPE="checkbox"  value="PHP" name="language">PHP</td>
+        </tr>
+      </table>
+      
+      <br>
+      <li>input type select</li>
+      <p>รูปแบบการใช้งาน</p>
+      <div class="examcode">
+        <div class="w3-exampl"> 
+          <span class="phpstringcolor" style="color:brown">&lt;select <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="language</span>&gt;  
+          <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="HTML"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">ภาษา</span> HTML</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+          <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="CSS"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">ภาษา</span> CSS</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+          <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="JAVA"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">ภาษา</span> JAVA Script</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+          <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="PHP"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">ภาษา</span> PHP</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+            <br><span class="phpstringcolor" style="color:brown">&lt;/select&gt;
+          </div>
+      </div>
+      
+      <p>ผลลัพธ์</p>
+      <table>
+        <tr>
+          <td><select>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JAVA">JAVA Script</option>
+            <option value="PHP">PHP</option>
+        </select></td>
+        </tr>
+      </table>
+      
+      <br>
+      <li>input type submit</li>
+      <p>รูปแบบการใช้งาน</p>
+      <div class="examcode">
+        <div class="w3-exampl"> 
+      <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="submit"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="send"</span>&gt;
+        </div>
+      </div>
+      
+      <p>ผลลัพธ์</p>
+      <table>
+        <tr>
+          <td><INPUT TYPE="submit"  value="send"></td>
+        </tr>
+      </table>
+      
+      <br>
+      <li>input type reset</li>
+      <p>รูปแบบการใช้งาน</p>
+      <div class="examcode">
+        <div class="w3-exampl"> 
+      <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="reset"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="clear"</span>&gt;
+        </div>
+      </div>
+      
+      
+      <p>ผลลัพธ์</p>
+      <table>
+        <tr>
+          <td><INPUT TYPE="reset"  value="clear"></td>
+        </tr>
+      </table>
+      
+      <br>
+      <h4>ตัวอย่างการรับค่าและส่งค่าผ่านฟอร์ม</h4>
+      
+      <br><h4>การส่งค่าผ่านฟอร์ม</h4>
+      <p>ส่งค่าข้อมูลไปประมวลผลที่ไฟล์ data.php </p>
+      <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="phptagcolor" style="color:red">&lt;html&gt;</span>
+        <br> <span class="phptagcolor" style="color:red">&lt;body&gt;</span>
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;form   <span class="phptagcolor" style="color:red">action</span><span class="phpkeywordcolor" style="color:mediumblue">="data.php"</span> <span class="phptagcolor" style="color:red">method</span><span class="phpkeywordcolor" style="color:mediumblue">="POST"</span>&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;table&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Username : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="username"</span>&gt;</span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Password : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="password"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="password"</span>&gt;</span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Sex: <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="radio"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="sex"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="male"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">เพศชาย</span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="radio"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="sex"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="female"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">เพศหญิง</span></span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Code : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langhtml"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="HTML"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">HTML</span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langcss"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="CSS"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">CSS</span></span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langjava"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="JAVA Script"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">JAVA Script</span></span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="checkbox"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="langphp"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="PHP"</span>&gt;<span style="font-family: 'Prompt',sans-serif; color:black;">ภาษา</span> <span style="color:black">PHP</span></span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Platform : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;select <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="platform"</span>&gt;  
+        <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="Facebook"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">แอพพลิเคชั่น</span> Facebook</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="Instagram"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">แอพพลิเคชั่น</span> Instagram</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="Youtube"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">แอพพลิเคชั่น</span> Youtube</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;option   <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="TikTok"</span>&gt;<span style="color:black"><span style="font-family: 'Prompt',sans-serif;">แอพพลิเคชั่น</span> TikTok</span></span><span class="phpstringcolor" style="color:brown">&lt;/option&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;/select&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="submit"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="send"</span>></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="reset"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="clear"</span>&gt;<span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;/table&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/form&gt;</span>
+        <br>
+        <br><span class="phptagcolor" style="color:red">&lt;/body&gt;</span><br></span> 
+        <span class="phptagcolor" style="color:red">&lt;/html&gt;</span><br></span>
+      
+      </div>
+    </div>
+  <br>
+  <h4>การรับค่าข้อมูลที่ส่งมาจากฟอร์ม</h4>  
+  <p>ไฟล์ data.php จะรับค่าข้อมูลที่ส่งผ่านฟอร์มและนำมาประมวลผล</p>
+  <p>สร้างตัวแปรเพื่อที่จะใช้ตัวแปรรับค่าข้อมูล $ชื่อตัวแปร = $_POST['ชื่อที่ส่งมาจากฟอร์มตาม name'];</p>
+    <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="phptagcolor" style="color:red">&lt;?php</span> 
+        <br>$Username =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['username']</span>;
+        <br>$Password =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['password']</span>;
+        <br>$Sex =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['sex']</span>;
+        <br>$C_html =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['langhtml']</span>;
+        <br>$C_css =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['langcss']</span>;
+        <br>$C_java =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['langjava']</span>;
+        <br>$C_php =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['langphp']</span>;
+        <br>$Platform =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST['platform']</span>;
+        <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+        
+        <br><br><span class="phptagcolor" style="color:red">&lt;html&gt;</span>
+        <br> <span class="phptagcolor" style="color:red">&lt;body&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;table&gt;</span>
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"Your Username : "</span><span style="color:black">. $Username</span> ?></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"Your Password : "</span><span style="color:black">. $Username</span> ?></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"Sex : "</span><span style="color:black">. $Sex</span> ?></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"Choose Code is : "</span>?></span>&lt;/td&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;<span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo "<span style="color:black">$C_html</span> "</span> ?> </span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;<span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo "<span style="color:black">$C_css</span> "</span> ?> </span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;<span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo "<span style="color:black">$C_java</span> "</span> ?> </span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;<span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo "<span style="color:black">$C_php</span> "</span> ?> </span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phptagcolor" style="color:red">&lt;?php <span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"Choose Platform : "</span><span style="color:black">. $Platform</span> ?></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;/table&gt;</span>
+        
+        <br><br> <span class="phptagcolor" style="color:red">&lt;/body&gt;</span>
+        <br><span class="phptagcolor" style="color:red">&lt;/html&gt;</span>
+        
+        
+      </div>
+    </div>
+    
+</diV><!--ปิด div contentphp-->
+    </div><!--ปิด div content-->
+
+
+      
+      
+   </body>
+</html>

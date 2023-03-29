@@ -1,0 +1,113 @@
+@font-face{
+    font-family: "Black_Ops_One";
+    src:url(Black_Ops_One/BlackOpsOne-Regular.ttf) format('truetype');
+}
+.w3-exampl{ /*ในส่วนของเนื้อหาตัวอย่าง Code*/
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    box-sizing: inherit;
+    font-family:  'Quantico',sans-serif;
+    width: auto;
+    background-color: #fff;
+    color: #000;
+    padding: 8px 12px;
+    word-wrap: break-word;
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+    border-left: 4px solid #04AA6D;
+    font-size: 16px;
+}
+.examcode{ /*ในส่วนของพื้นหลังเนื้อหาตัวอย่าง Code*/
+    
+    font-size: 15px;
+    color: #000!important;
+    width:89%;
+    background-color: #E7E9EB;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 24px -10px;
+    box-shadow: none!important;
+}
+/*ส่วนเนื้อหา*/
+.content{
+    margin-top: 35px;
+    margin-left:70px;
+    margin-right:17px
+}
+.headcontent{
+    
+    font-size: 30px;
+    font-weight: 150;
+    letter-spacing: 2px;
+    margin-bottom:25px;
+    margin-top:15px;
+}
+.contentphp{
+    margin-top: 30px;
+    font-family:  'Prompt',sans-serif;
+    font-size: 17px;
+    
+}
+
+img{
+    max-width:60%;
+    width:550px;
+    height:auto;
+    
+}
+
+.namecontent{ /*ในส่วนของชื่อเนื้อหา*/
+    -webkit-text-size-adjust: 80%;
+    line-height: 1.5;
+    box-sizing: inherit;
+    
+    width: auto;
+    
+    
+    padding: 15px 15px;
+    word-wrap: break-word;
+    
+    
+    
+}
+.headcontent{ /*ในส่วนของพื้นหลังชื่อเรื่อง*/
+    
+    font-size: 19px;
+    width:90%;
+    
+    
+    padding: 15px 35px;
+    
+    box-shadow: none!important;
+}
+.php{
+    color:#8193ce;
+    background-color:white;
+    padding:10px;
+    border-top: 4px solid #8193ce ;
+    border-bottom: 4px solid #8193ce ;
+    cursor:default;
+    font-family: 'Black_Ops_One',sans-serif;
+}
+.namephp{
+    color:#ffffff;
+    background-color:rgb(0, 0, 0);
+    padding:10px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black ;
+    
+    cursor:default;
+    font-family: 'Black_Ops_One',sans-serif;
+}
+
+th{
+    padding-top:10px;
+    padding-right:50px;
+    text-align: center;
+    
+}
+td{
+    text-align: center;
+    padding-top:10px;
+    padding-right:50px;
+}

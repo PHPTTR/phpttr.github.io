@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="s.css">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt">
+    </head>
+   <body>
+   
+    
+    <center><div class="namecontent">
+      <div class="headcontent">
+      <span class="php">PHP</span><span class="namephp">Datatype</span> 
+      </div>
+    </div>                   
+    </center>
+
+<div class="content">
+<diV class="contentphp"><h3>ตัวแปรและชนิดของข้อมูล</h3>
+    <br>
+    <h4>1.กฏการตั้งชื่อตัวแปร</h4>
+     <li>การประกาศตัวแปรจะต้องขึ้นต้นด้วย $ </li>
+     <li >ไม่ขึ้นต้นด้วยตัวเลข แต่สามารถใช้ตัวเลขประกอบในชื่อของตัวแปรได้</li>
+     <li>สามารถใช้ตัวอักษรภาษาอังกฤษ หรือภาษาไทยได้</li>
+     <li>สามารถใช้สัญลักษณ์ _ (underscore) ขึ้นต้น หรือประกอบในชื่อของตัวแปรได้</li>
+     <li>ไม่ใช้สัญลักษณ์ทางคณิตศาสตร์ประกอบในชื่อของตัวแปร</li>
+     <li>ชื่อตัวแปรห้ามมีเว้นวรรค</li>
+     <li>การประกาศตัวแปรนั้น การใช้ตัวอักษรพิมพ์เล็กหรือพิมพ์ใหญ่ แม้จะสะกดเหมือนกันแต่ถือว่าเป็นคนละตัวแปรกัน ซึ่ง PHP มีลักษณะเป็น Case sensitive</li>
+  
+  
+     <br>
+     <h4>2.ชนิดข้อมูล</h4>
+       
+       <h4>ข้อมูลชนิดกลุ่มอักขระ (string)</h4>
+       <p > ข้อมูลที่นำเอาตัวอักษร ตัวเลข และเครื่องหมายต่าง ๆ มาประกอบกันเป็นข้อความ</p>
+       <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+        $day = <span class="phpstringcolor" style="color:red">"Friday"</span> ; <br>
+        $time = <span class="phpstringcolor" style="color:red">"08:00"</span> ;
+        <br><br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Date"</span> . $day . <span class="phpstringcolor" style="color:brown">"&lt;br&gt;"</span> ;
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Time"</span> . $time ;
+        <br><span class="phpnumbercolor" style="color:red"></span> 
+        <span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+      
+      </div>
+    </div> 
+  
+    <h4>ข้อมูลชนิดตรรกะ (boolean)</h4>
+        <p >ข้อมูลที่เก็บค่า true (จริง) หรือ false (เท็จ) ตัวแปรชนิดนี้ส่วนใหญ่เอาไปใช้ในการเปรียบเทียบในเงื่อนไขเพือตัดสินใจดำเนินการขั้นต่อไป</p>
+
+    <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      $x = <span class="phpstringcolor" style="color:red">false</span> ; 
+      
+      <br><br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($x) {
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"success"</span> ;
+      <br>}<br><span class="phpkeywordcolor" style="color:mediumblue"> else </span> { 
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"fail"</span> ;
+      <br><span class="phpnumbercolor" style="color:red"></span> 
+      }
+      <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+    
+    </div>
+  </div> 
+
+  
+  <h4>ข้อมูลชนิดเลขจำนวนเต็ม (Integer)</h4>
+        <p >ข้อมูลชนิดเลขจำนวนเต็ม ทั้งจำนวนเต็มบวก จำนวนเต็มลบ และจำนวนศูนย์</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      $x = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      $y= <span class="phpstringcolor" style="color:red">5</span> ; <br>
+      $z <span class="phpstringcolor" style="color:brown"></span> ; <br>
+      $z = $x + $y ;
+      <br><br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Value $z = "</span> . $z ;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+   
+    </div>
+  </div>  
+    
+  <h4>ข้อมูลชนิดเลขทศนิยม (Floating-Point Number)</h4>
+  <p >ข้อมูลชนิดเลขทศนิยม โดยอาจเป็นค่าทศนิยมที่เป็นจำนวนบวก จำนวนลบ หรือรูปแบบตัวเลขทางวิทยาศาสตร์</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      $x = <span class="phpstringcolor" style="color:red">1.5</span> ; <br>
+      $y= <span class="phpstringcolor" style="color:red">1500</span> ; <br>
+      
+      
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> $x .<span class="phpstringcolor" style="color:brown">"kilometer ="</span> . $y . <span class="phpstringcolor" style="color:brown">"meter"</span> ;  
+      <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+   
+    </div>
+  </div>
+
+  <h4>ข้อมูลชนิดอาร์เรย์ (Array)</h4>
+  <p >อาร์เรย์คือการเก็บข้อมูลชนิดเดียวกัน โดยสามารถเก็บค่าข้อมูลได้หลายค่า โดยข้อมูลใน () จะเรียกว่า index เริ่มตั้งแต่ 0 เช่น $num[0] , $num[1] , $num[2] , $num[3] </p>
+  <div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+      $num = <span class="phpkeywordcolor" style="color:mediumblue">array</span><span class="phpstringcolor" style="color:red">(1.5,7,-9,"Hello",true)</span> ; <br>
+      
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> $num[0] . <span class="phpstringcolor" style="color:brown">"&lt;br&gt;"</span> ;
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> $num[1] . <span class="phpstringcolor" style="color:brown">"&lt;br&gt;"</span> ;
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> $num[2] . <span class="phpstringcolor" style="color:brown">"&lt;br&gt;"</span> ;
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> $num[3] . <span class="phpstringcolor" style="color:brown">"&lt;br&gt;"</span> ;
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> $num[4] . <span class="phpstringcolor" style="color:brown">"&lt;br&gt;"</span> ;
+      <br><span class="phpstringcolor" style="color:brown">var_dump($num)</span>;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+   
+    </div>
+  </div>
+
+</diV><!--ปิด div contentphp-->
+    </div><!--ปิด div content-->
+
+      <!--สิ้นสุดส่วนเนื้อหา-->
+      
+      
+   </body>
+</html>

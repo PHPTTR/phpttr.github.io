@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="s.css">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt">
+    </head>
+   <body>
+    
+      
+      <!--ส่วนเนื้อหา-->
+    
+<center><div class="namecontent">
+  <div class="headcontent">
+  <span class="php">PHP</span><span class="namephp">Operator</span> 
+  </div>
+</div>                   
+</center>
+<div class="content">
+<diV class="contentphp"><h3>ตัวดำเนินการ</h3>
+    <br>
+    <h4>1. ตัวดำเนินการทางคณิตศาสตร์</h4>
+       <p> ตัวดำเนินการทางคณิตศาสตร์เป็นตัวดำเนินการในกลุ่มที่เกี่ยวข้องกับการคำนวณหาผลลัพธ์ต่างๆทางคณิตศาสตร์</p>
+       <table>
+        <tr>
+            <th>ตัวดำเนินการ</th>
+            <th>ตัวอย่าง</th>
+            <th>เครื่องหมาย</th>
+            <th>หลักการใช้</th>
+          </tr>
+         
+          <tr>
+            <td>+</td>
+            <td>$x = $a + $b 	</td>
+            <td>บวก</td>
+            <td>นำ a + b และเก็บค่าไว้ใน x</td>
+          </tr>
+
+          <tr>
+            <td>-</td>
+            <td>$x = $a - $b 	</td>
+            <td>ลบ</td>
+            <td>นำ a - b และเก็บค่าไว้ใน x</td>
+          </tr>
+
+          <tr>
+            <td>*</td>
+            <td>$x = $a * $b 	</td>
+            <td>คูณ</td>
+            <td>นำ a * b และเก็บค่าไว้ใน x</td>
+          </tr>
+
+          <tr>
+            <td>/</td>
+            <td>$x = $a / $b 	</td>
+            <td>หาร</td>
+            <td>นำ a / b และเก็บค่าไว้ใน x</td>
+          </tr>
+
+          <tr>
+            <td>%</td>
+            <td>$x = $a % $b 	</td>
+            <td>หารเอาเศษ</td>
+            <td>นำ a % b และเก็บค่าไว้ใน x</td>
+          </tr>
+          </table>
+    <br><p><b>ตัวดำเนินการบวก +</b></p>
+      <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      $b = <span class="phpstringcolor" style="color:red">2</span> ;
+        <br>
+    $x = $a + $b ;<br> 
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Value x ="</span> . $x  </span>;
+ 
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div> 
+
+  <p><b>ตัวดำเนินการลบ -</b></p>
+      <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br> 
+      $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      $b = <span class="phpstringcolor" style="color:red">2</span> ;
+        <br>
+    $x = $a - $b ;<br> 
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Value x ="</span> . $x  </span>;
+ 
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div> 
+
+  <p><b>ตัวดำเนินการคูณ *</b></p>
+      <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      $b = <span class="phpstringcolor" style="color:red">2</span> ;
+        <br>
+    $x = $a * $b ;<br> 
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Value x ="</span> . $x  </span>;
+ 
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div> 
+
+  <p><b>ตัวดำเนินการหาร /</b></p>
+      <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      $b = <span class="phpstringcolor" style="color:red">2</span> ;
+        <br>
+    $x = $a / $b ;<br> 
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Value x ="</span> . $x  </span>;
+ 
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div> 
+  
+  <p><b>ตัวดำเนินการหารเอาเศษ %</b></p>
+      <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br> 
+      $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      $b = <span class="phpstringcolor" style="color:red">2</span> ;
+        <br>
+    $x = $a % $b ;<br> 
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Value x ="</span> . $x  </span>;
+ 
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div> 
+  
+     <br>
+     <h4>2. ตัวดำเนินการเพิ่มและลดค่า</h4>
+  <p>ตัวดำเนินการเพิ่มและลดค่าของภาษา PHP ใช้เพื่อเพิ่มหรือลดค่าของตัวแปร </p>
+  <table>
+    <tr>
+        <th>ตัวดำเนินการ</th>
+        <th>ตัวอย่าง</th>
+
+        <th>หลักการใช้</th>
+      </tr>
+     
+      <tr>
+        <td>++</td>
+        <td>$a++</td>
+        
+        <td>รีเทิร์นค่า a หรือก็คือตัวแปรมีค่าคงเดิมแล้วจึงเพิ่มค่าตัวแปรทีละหนึ่ง </td>
+      </tr>
+
+      <tr>
+        <td>++</td>
+        <td>++$a</td>
+        
+        <td>เพิ่มค่า a ทีละหนึ่ง </td>
+      </tr>
+
+      <tr>
+        <td>--</td>
+        <td>$a--</td>
+        
+        <td>รีเทิร์นค่า a หรือก็คือตัวแปรมีค่าคงเดิมแล้วจึงลดค่าตัวแปรทีละหนึ่ง</td>
+      </tr>
+
+      <tr>
+        <td>--</td>
+        <td>--$a</td>
+        
+        <td>ลดค่า a ทีละหนึ่ง </td>
+      </tr>
+  </table>
+ 
+  <br><p><b>ตัวดำเนินการเพิ่มค่า รีเทิร์นค่าหรือตัวแปรมีค่าคงเดิมแล้วจึงเพิ่ม</b></p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $x = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    $x++ ;
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span>  $x ;
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  
+  </div>
+</div>
+
+<p><b>ตัวดำเนินการเพิ่มค่า</b></p>
+<div class="examcode">
+  <div class="w3-exampl">
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $x = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+  
+    <span class="phpkeywordcolor" style="color:mediumblue">print</span>  ++$x ;
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+
+<p><b>ตัวดำเนินการลดค่า รีเทิร์นค่าหรือตัวแปรมีค่าคงเดิมแล้วจึงลด</b></p>
+<div class="examcode">
+  <div class="w3-exampl">
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $x = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    $x-- ;
+    <br><span class="phpkeywordcolor" style="color:mediumblue">print</span>  $x ;
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+
+<p><b>ตัวดำเนินการลดค่า</b></p>
+<div class="examcode">
+  <div class="w3-exampl">
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $x = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+   
+    <span class="phpkeywordcolor" style="color:mediumblue">print</span>  --$x ;
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+
+  <br>
+  <h4>3. ตัวดำเนินการกำหนดค่า</h4>
+   <p>ตัวดำเนินการกำหนดค่าจะทำการเอาตัวแปรไปดำเนินการทางคณิตศาสตร์กับค่าที่กำหนด </p>     
+  
+   <table>
+    <tr>
+        <th>ตัวดำเนินการ</th>
+        <th>ตัวอย่าง</th>
+        <th>หลักการใช้</th>
+        <th>รูปแบบประโยคสัญลักษณ์</th>
+      </tr>
+     
+      <tr>
+        <td>+=</td>
+        <td>$a += 10 </td>
+        <td>กำหนดค่าให้ a แล้วนำ a บวกกับ 10</td>
+        <td>$a = $a + 10</td>
+      </tr>
+
+      <tr>
+        <td>-=</td>
+        <td>$a -= 10 </td>
+        <td>กำหนดค่าให้ a แล้วนำ a ลบกับ 10</td>
+        <td>$a = $a - 10</td>
+      </tr>
+
+      <tr>
+        <td>*=</td>
+        <td>$a *= 10 </td>
+        <td>กำหนดค่าให้ a แล้วนำ a คูณกับ 10</td>
+        <td>$a = $a * 10</td>
+      </tr>
+
+      <tr>
+        <td>/=</td>
+        <td>$a /= 10 </td>
+        <td>กำหนดค่าให้ a แล้วนำ a หารกับ 10</td>
+        <td>$a = $a / 10</td>
+      </tr>
+
+      <tr>
+        <td>%=</td>
+        <td>$a %= 10 </td>
+        <td>กำหนดค่าให้ a แล้วนำ a หารเอาเศษกับ 10</td>
+        <td>$a = $a % 10</td>
+      </tr>
+      </table>
+   <br>
+      <p><b>ตัวดำเนินการกำหนดค่าให้ a แล้วนำ a + 10</b></p>
+      <p>รูปแบบประโยคสัญลักษณ์ $a = $a + 10</p>
+    <div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">100</span> ; <br>
+      $a += <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      
+      <span class="phpkeywordcolor" style="color:mediumblue">print</span> $a ;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+
+<p><b>ตัวดำเนินการกำหนดค่าให้ a แล้วนำ a - 10</b></p>
+      <p>รูปแบบประโยคสัญลักษณ์ $a = $a - 10</p>
+<div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">100</span> ; <br>
+      $a -= <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      <span class="phpkeywordcolor" style="color:mediumblue">print</span> $a ;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+ 
+<p><b>ตัวดำเนินการกำหนดค่าให้ a แล้วนำ a * 10</b></p>
+      <p>รูปแบบประโยคสัญลักษณ์ $a = $a * 10</p>
+<div class="examcode">
+  <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      
+      $a = <span class="phpstringcolor" style="color:red">100</span> ; <br>
+      $a *= <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      
+      <span class="phpkeywordcolor" style="color:mediumblue">print</span> $a ;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    </div>
+  </div>
+
+  <p><b>ตัวดำเนินการกำหนดค่าให้ a แล้วนำ a / 10</b></p>
+      <p>รูปแบบประโยคสัญลักษณ์ $a = $a / 10</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">100</span> ; <br>
+      $a /= <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      
+      <span class="phpkeywordcolor" style="color:mediumblue">print</span> $a ;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    </div>
+  </div>
+  
+  <p><b>ตัวดำเนินการกำหนดค่าให้ a แล้วนำ a % 10</b></p>
+      <p>รูปแบบประโยคสัญลักษณ์ $a = $a % 10</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+      $a = <span class="phpstringcolor" style="color:red">100</span> ; <br>
+      $a %= <span class="phpstringcolor" style="color:red">10</span> ; <br>
+      
+      <span class="phpkeywordcolor" style="color:mediumblue">print</span> $a ;
+      <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+   
+    </div>
+  </div>       
+  <br>
+
+  <h4>4. ตัวดำเนินการเปรียบเทียบ</h4>
+  <p>ตัวดำเนินการเปรียบเทียบที่ใช้สำหรับเปรียบเทียบระหว่างค่าสองค่า ผลลัพธ์ของการเปรียบเทียบจะได้เป็น Boolean ที่มีค่าเป็นเพียง True หรือ False</p>
+  
+ <table>
+<tr>
+    <th>ตัวดำเนินการ</th>
+    <th>ตัวอย่าง</th>
+    <th>ผลลัพธ์</th>
+    <th>หลักการใช้</th>
+  </tr>
+ 
+  <tr>
+    <td>==</td>
+    <td>$a == $b	</td>
+    <td>เป็นจริงถ้า a เท่ากับ b</td>
+    <td>== คือการเปรียบเทียบว่าค่าเท่ากันหรือไม่</td>
+  </tr>
+  
+  <tr>
+    <td>!= , &lt;&gt;</td>
+    <td>$a != $b</td>
+    <td>เป็นจริงถ้า a ไม่เท่ากับ b</td>
+    <td>!= , &lt;&gt; คือการเปรียบเทียบว่าค่าไม่เท่ากันหรือไม่</td>
+  </tr>
+  
+  <tr>
+    <td>&lt;</td>
+    <td>$a &lt; $b</td>
+    <td>เป็นจริงถ้า a น้อยกว่า b</td>
+    <td>&lt; คือการเปรียบเทียบว่าค่า a น้อยกว่า bหรือไม่</td>
+  </tr>
+
+  <tr>
+    <td>&lt;=</td>
+    <td>$a &lt;= $b</td>
+    <td>เป็นจริงถ้า a น้อยกว่าหรือเท่ากับ b</td>
+    <td>&lt;= คือการเปรียบเทียบว่าค่า a น้อยกว่าหรือเท่ากับ bหรือไม่</td>
+  </tr>
+  
+  <tr>
+    <td>&gt;</td>
+    <td>$a &gt; $b</td>
+    <td>เป็นจริงถ้า a มากกว่า b</td>
+    <td>&gt; คือการเปรียบเทียบว่าค่า a มากกว่า bหรือไม่</td>
+  </tr>
+ 
+  <tr>
+    <td>&gt;=</td>
+    <td>$a &gt;= $b</td>
+    <td>เป็นจริงถ้า a มากกว่าหรือเท่ากับ b</td>
+    <td>&gt;= คือการเปรียบเทียบว่าค่า a มากกว่าหรือเท่ากับ bหรือไม่</td>
+  </tr>
+ </table>
+  <br>
+  <p><b>เปรียบเทียบค่า a เท่ากับ b หรือไม่</b></p>
+  <p>เป็นจริงถ้า a เท่ากับ b เป็นเท็จถ้าไม่เท่ากัน</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a == $b) </span>{
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+<p><b>เปรียบเทียบค่า a ไม่เท่ากับ b หรือไม่</b></p>
+  <p>เป็นจริงถ้า a ไม่เท่ากับ b เป็นเท็จถ้าเท่ากัน</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">20</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a != $b) </span>{
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+<p><b>เปรียบเทียบค่า a น้อยกว่า b หรือไม่</b></p>
+  <p>เป็นจริงถ้า a น้อยกว่า b เป็นเท็จถ้า a มากกว่า b</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">9</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a &lt; $b) </span>{
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+<p><b>เปรียบเทียบค่า a น้อยกว่าเท่ากับ b หรือไม่</b></p>
+  <p>เป็นจริงถ้า a น้อยกว่าหรือเท่ากับ b เป็นเท็จถ้า a มากกว่า b</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a &lt;= $b) </span>{
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+<p><b>เปรียบเทียบค่า a มากกว่า b หรือไม่</b></p>
+  <p>เป็นจริงถ้า a มากกว่า b เป็นเท็จถ้า a น้อยกว่า b</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">20</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a &gt; $b) </span>{
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+<p><b>เปรียบเทียบค่า a มากกว่าเท่ากับ b หรือไม่</b></p>
+  <p>เป็นจริงถ้า a มากกว่าหรือเท่ากับ b เป็นเท็จถ้า a น้อยกว่า b</p>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+    <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a &gt;= $b) </span>{
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+  <h4>5. ตัวดำเนินการตรรกะ</h4>
+  <p>ตัวดำเนินการตรรกะ คือ ตัวดำเนินการที่ใช้สำหรับเชื่อมต่อค่าความจริง</p>
+  <table>
+    <tr>
+        <th>ตัวดำเนินการ</th>
+        <th>ตัวอย่าง</th>
+        <th>หลักการใช้</th>
+      </tr>
+
+      <tr>
+        <td>และ ( and )</td>
+        <td>($a and $b)	</td>
+        <td>นำค่า a และ b มาเปรียบเทียบจะต้องเป็นจริงทั้งคู่</td>
+      </tr>
+
+      <tr>
+        <td>หรือ ( or )</td>
+        <td>($a or $b)	</td>
+        <td>นำค่า a และ b มาเปรียบเทียบจะต้องเป็นจริงเพียงตัวใดตัวหนึ่ง แต่จะเป็นเท็จถ้าทั้ง a และ b เป็นเท็จทั้งคู่</td>
+      </tr>
+
+      <tr>
+        <td>นิเสธ ( ! )</td>
+        <td>($a !== $b)	</td>
+        <td>นำค่า a และ b มาเปรียบเทียบจะมีค่าเป็นจริงก็ต่อเมื่อเปรียบเทียบแล้วเป็นเท็จ</td>
+      </tr>
+      </table>
+  <br>
+  <p><b>เปรียบเทียบค่า a และ b เป็นจริงหรือไม่ ค่า a และ b จะต้องเป็นจริงทั้งคู่ในตรรกะ และ ถึงจะเป็นค่าจริง</b></p>
+  <P>กำหนดค่าให้ a = 10&lt;20 ซึ่งก็คือค่า จริง</P>
+  <P>กำหนดค่าให้ b = 20&lt;10 ซึ่งก็คือค่า จริง</P>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+   <span class="phptagcolor" style="color:red">&lt;?php</span><br> 
+    $a = <span class="phpstringcolor" style="color:red">10&lt;20</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">20&gt;10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a <span class="phpkeywordcolor" style="color:mediumblue">and</span> $b ) <span>{<br> 
+    </span> <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+  <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div> 
+
+<p><b>เปรียบเทียบค่า a หรือ b เป็นจริงหรือไม่ ค่า a หรือ b จะต้องเป็นจริงเพียงตัวใดตัวหนึ่งในตรรกะ หรือ ถึงจะเป็นค่าจริง</b></p>
+  <P>กำหนดค่าให้ a = 10&lt;20 ซึ่งก็คือค่า จริง</P>
+  <P>กำหนดค่าให้ b = 20&lt;10 ซึ่งก็คือค่า เท็จ</P>
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+   <span class="phptagcolor" style="color:red">&lt;?php</span><br>
+    $a = <span class="phpstringcolor" style="color:red">10&lt;20</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">20&lt;10</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a <span class="phpkeywordcolor" style="color:mediumblue">or</span> $b ) <span>{<br> 
+    </span> <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+  <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+  <p><b>เปรียบเทียบค่า a ไม่เท่ากับ b หรือไม่ การเปรียบเทียบจะต้องต้องเป็นเท็จจึงจะรีเทิร์นค่าเป็นจริง</b></p>
+  <P>กำหนดค่า a = 10 b = 20 เมื่อเปรียบเทียบ ($a !== $b ) จะได้ค่าเป็นจริง</P>
+
+  <div class="examcode">
+    <div class="w3-exampl">
+    
+   <span class="phptagcolor" style="color:red">&lt;?php</span><br> 
+    $a = <span class="phpstringcolor" style="color:red">10</span> ; <br>
+    $b = <span class="phpstringcolor" style="color:red">20</span> ; <br>
+    <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> <span>( $a <span class="phpkeywordcolor" style="color:mediumblue">!==</span> $b ) <span>{<br> 
+    </span> <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"True"</span> ;
+    <br>}
+    <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+      <br> 
+     <span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"False"</span> ;
+    <br>}
+  <br><span class="phptagcolor" style="color:red">?&gt;</span>
+  </div>
+</div>
+
+
+</diV><!--ปิด div contentphp-->
+    </div><!--ปิด div content-->
+
+      <!--สิ้นสุดส่วนเนื้อหา-->
+      
+      
+   </body>
+</html>

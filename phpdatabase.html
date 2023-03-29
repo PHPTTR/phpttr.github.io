@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="s.css">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt">
+    </head>
+   <body>
+    
+      
+      <!--ส่วนเนื้อหา-->
+    
+<center><div class="namecontent">
+  <div class="headcontent">
+  <span class="php">PHP</span><span class="namephp">Database</span> 
+  </div>
+</div>                   
+</center>
+<div class="content">
+<diV class="contentphp"><h3>phpMyAdmin</h3>
+    <br>
+    <h4>phpMyAdmin คืออะไร</h4>
+      
+      <p>โปรแกรมที่ถูกพัฒนาโดยใช้ภาษา PHP เพื่อใช้ในการบริหารจัดการฐานข้อมูล Mysql ผ่านเว็บเบราว์เซอร์</p>
+      <h4>เริ่มต้นการใช้งาน phpMyAdmin</h4>
+      <p>1. download โปรแกรมที่จำลองเครื่องคอมพิวเตอร์ให้เป็น web server เช่น Appserv , XAMPP</p>
+      <p>2. พิมพ์ http://localhost/phpmyadmin/ ที่ URL บน web browser</p>
+      <p>3. คลิกที่ phpMyAdmin เพื่อทำการกรอกข้อมูล username และ password</p>
+      <p>username = root</p>
+      <p>password = 12345678</p>
+      <p><img src="pic/d1.jpg"></p>
+      
+      <br>
+      <h4>เริ่มต้นการสร้าง Database</h4>
+      <p>ทำการสร้าง Database โดยคลิกตามลำดับ</p>
+      <p>1. คลิกเลือกที่ new เพื่อสร้าง Database ใหม่</p>
+      <p>2. ตั้งชื่อ Database</p>
+      <p>3. คลิก Create เพื่อสร้าง Database</p>
+      <p><img src="pic/d2.jpg"></p>
+      
+      <br>
+      <h4>เริ่มต้นการสร้างตาราง (Table) </h4>
+      <p>ทำการสร้างตาราง (Table) โดยคลิกตามลำดับ</p>
+      <p>1. ตั้งชื่อตาราง Table name</p>
+      <p>2. ตั้งชื่อ Column</p>
+      <p>3. กำหนดค่าของ Column นั้นว่าค่าที่เก็บเป็นตัวอักษรหรือตัวเลข</p>
+      <p>4. กำหนดขนาดของ Column จะเก็บขนาดเท่าไหร่</p>
+      <p>5. กำหนด Column แรกเป็น Primary Key</p>
+      <p>6. คลิก Save เพื่อทำการสร้างตาราง (Table)</p>
+      <p><img src="pic/d3.jpg"></p>
+      
+      
+      
+      <br>
+      <h4>เริ่มต้นการแทรกข้อมูลลงในตาราง (Table) </h4>
+      <p>เมื่อทำการสร้างตาราง (Table) ให้แทรกข้อมูลลงในตาราง โดยคลิกตามลำดับ</p>
+      <p>1. เลือก Insert</p>
+      <p>2. Value ตือค่าข้อมูลที่ต้องการแทรกในแต่ละคอลัมน์</p>
+      <p>3 เมื่อกรอกข้อมูลเรียบร้อย ให้คลิก Go เพื่อทำการแทรกข้อมูลลงในตาราง</p>
+      <p><img src="pic/d4.jpg"></p>
+
+      <br>
+      <h4>สร้างไฟล์ connect.php สำหรับเชื่อมต่อฐานข้อมูล MySQL</h4>
+      <p>สร้างตัวแปร $con_nect เพื่อเก็บฟังก์ชันในการเชื่อมต่อฐานข้อมูล = mysqli_connect("hostname","username","password","database name");</p>
+      <P>ในการเช็คฟังก์ชันการเชื่อมต่อฐานข้อมูลว่าเชื่อมต่อได้หรือไม่ สามารถใช้ตัวแปรที่สร้างเก็บค่าฟังก์ชัน $con_nect และคำสั่ง if($con_nect -> connect_eror)</P>
+      <p>die คือคำสั่งถ้าไม่สามารถเชื่อมต่อฐานข้อมูลได้จะทำงานในบล็อกการทำงานในส่วน die</p>
+      <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span> 
+        <br>$con_nect = <span class="phpstringcolor" style="color:brown">mysqli_connect</span>(<span class="phptagcolor" style="color:red">"localhost"</span>,<span class="phptagcolor" style="color:red">"root"</span>,<span class="phptagcolor" style="color:red">"12345678"</span>,<span class="phptagcolor" style="color:red">"product"</span>);
+        <br><span class="phpkeywordcolor" style="color:mediumblue">if</span>($con_nect -> <span class="phpstringcolor" style="color:brown">connect_error</span>){
+        <br><span class="phpkeywordcolor" style="color:mediumblue">die</span>(<span class="phpstringcolor" style="color:brown">"Connection failed"</span>);
+        <br>}
+        <br><span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"Connected successfully"</span>;
+        
+        
+        <br><span class="phptagcolor" style="color:red">?&gt;</span>
+      
+      </div>
+    </div>
+    <h4>ผลลัพธ์</h4>
+    <p><img src="pic/d5.jpg"></P>
+        <p>เมื่อแสดงผลเป็น Connected successfully คือสามารถเชื่อมต่อกับ Database และให้ทำการใส่ // เพื่อทำการ comment ไม่ให้แสดงผลในการนำไปใช้ในไฟล์อื่นๆ</p>
+        <div class="examcode">
+            <div class="w3-exampl">
+            
+            <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span> 
+            <br>$con_nect = <span class="phpstringcolor" style="color:brown">mysqli_connect</span>(<span class="phptagcolor" style="color:red">"localhost"</span>,<span class="phptagcolor" style="color:red">"root"</span>,<span class="phptagcolor" style="color:red">"12345678"</span>,<span class="phptagcolor" style="color:red">"product"</span>);
+            <br><span class="phpkeywordcolor" style="color:mediumblue">if</span>($con_nect -> <span class="phpstringcolor" style="color:brown">connect_eror</span>){
+            <br><span class="phpkeywordcolor" style="color:mediumblue">die</span>(<span class="phpstringcolor" style="color:brown">"Connection failed"</span>);
+            <br>}
+            <br><span class="phpkeywordcolor" style="color:darkgreen">//echo</span> <span class="phpstringcolor" style="color:darkgreen">"Connected successfully"</span>;
+            
+            
+            <br><span class="phptagcolor" style="color:red">?&gt;</span>
+          
+          </div>
+        </div>
+
+        <br>
+      <h4>สร้างไฟล์สำหรับโชว์ข้อมูลที่อยู่ในตาราง</h4>
+      <p>สร้างตัวแปร $result= เพื่อเก็บคำสั่ง mysqli_fetch_assoc เป็นคำสั่งที่คืนค่าข้อมูลในฐานข้อมูลที่อยู่ในลักษณะเป็นแถวหรือว่าเป็น record ที่อยู่ในรูปแบบของอาร์เรย์</p>
+      <P>ใช้ฟังก์ชัน Loop while ในการแสดงข้อมูลในฐานข้อมูล</P>
+      <p><span>&lt;a href="editform.phpid?=&lt;?=$result["Product_ID"]?>"Edit &lt;/a> คือการส่งค่าที่อยู่ในตารางซึ่งก็คือ Product_ID ไปยังไฟล์ที่กำหนด</p>
+      <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="phptagcolor" style="color:red">&lt;html&gt;</span><br></span> 
+        <span class="phptagcolor" style="color:red">&lt;body&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;table &gt;  
+          <br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;
+            <br><span class="phpstringcolor" style="color:brown">&lt;th&gt;<span>Product ID</span><span class="phpstringcolor" style="color:brown">&lt;/th &gt;<span></span>
+            <br><span class="phpstringcolor" style="color:brown">&lt;th&gt;<span>Product Name</span><span class="phpstringcolor" style="color:brown">&lt;/th &gt;<span></span>
+            <br><span class="phpstringcolor" style="color:brown">&lt;th&gt;<span>Product Price</span><span class="phpstringcolor" style="color:brown">&lt;/th &gt;<span></span>
+            <br><span class="phpstringcolor" style="color:brown">&lt;th&gt;<span>Product Storage</span><span class="phpstringcolor" style="color:brown">&lt;/th &gt;<span></span>
+            <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;
+            
+            <br><br><span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span> 
+      <br><span class="phpkeywordcolor" style="color:mediumblue">  require</span><span class="phpkeywordcolor" style="color:red">("connect.php")</span>;
+      <br>$sql= <span class="phpstringcolor" style="color:brown">"select * from product_list";</span>
+      <br>$query= <span class="phpstringcolor" style="color:brown">mysqli_query($con_nect,$sql);</span>
+      
+      <br><span class="phpkeywordcolor" style="color:mediumblue">  while</span><span class="phpstringcolor" style="color:brown">($result=mysqli_fetch_assoc($query))</span><span class="phpkeywordcolor" style="color:mediumblue">{</span>
+        <br><span class="phptagcolor" style="color:red">?&gt;</span>
+        <br><br><span class="phpkeywordcolor" style="color:mediumblue">&lt;tr <span class="phptagcolor" style="color:red">align="center"</span> &gt;</span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="150"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Product_ID"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="200"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Product_NAME"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="200"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Product_PRICE"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="200"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Storage"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td&gt;<span><span style="color:red">&lt;a href="editform.php?Product_ID=&lt;?=$result["Product_ID"]?>">Edit &lt;/a&gt;</span></span><span style="color:mediumblue">&lt;/td&gt;</span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td&gt;<span><span style="color:red">&lt;a href="deleteform.php?Product_ID=&lt;?=$result["Product_ID"]?>">Delete &lt;/a&gt;</span></span><span style="color:mediumblue">&lt;/td&gt;</span>
+          <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;/tr&gt;</span>
+          <br><br><span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span>
+      <br><span class="phpkeywordcolor" style="color:mediumblue">}</span>
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+      <br><br><span class="phptagcolor" style="color:red">&lt;/table&gt;</span> 
+      <br><span class="phptagcolor" style="color:red">&lt;/body&gt;</span>   
+      <br><span class="phptagcolor" style="color:red">&lt;/html&gt;</span> 
+    </div>
+    </div>
+      <h4>ผลลัพธ์</h4>
+      <p><img src="pic/d6.jpg"></p>
+
+
+    <br>
+    <h4>สร้าง form ในการเพิ่มข้อมูลลงในตาราง (Table)</h4>
+    <p>สร้างไฟล์ addform.html</p>  
+    <p>สร้างหน้า form ในการเพิ่มข้อมูลสินค้าโดยส่งข้อมูลไปยังไฟล์ adddata.php</p>
+      <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="phptagcolor" style="color:red">&lt;html&gt;</span><br></span> 
+        <span class="phptagcolor" style="color:red">&lt;body&gt;</span> 
+        <br><span class="phpstringcolor" style="color:brown">&lt;form   <span class="phptagcolor" style="color:red">action</span><span class="phpkeywordcolor" style="color:mediumblue">="adddata.php"</span> <span class="phptagcolor" style="color:red">method</span><span class="phpkeywordcolor" style="color:mediumblue">="POST"</span>&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;table&gt;</span>
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product ID : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductID"</span> <span class="phptagcolor" style="color:red">maxlength</span><span class="phpkeywordcolor" style="color:mediumblue">="5"</span> &gt;</span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product Name : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductNAME"</span> <span class="phptagcolor" style="color:red">maxlength</span><span class="phpkeywordcolor" style="color:mediumblue">="20"</span> &gt;</span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product Price : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductPRICE"</span> <span class="phptagcolor" style="color:red">maxlength</span><span class="phpkeywordcolor" style="color:mediumblue">="4"</span> &gt;</span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product Storage : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductSTORAGE"</span> <span class="phptagcolor" style="color:red">maxlength</span><span class="phpkeywordcolor" style="color:mediumblue">="3"</span> &gt;</span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;<span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="submit"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="send"</span>&gt;<span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;<span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="reset"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="clear"</span>&gt;<span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;/table&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;/form&gt;
+          <br><br><span class="phptagcolor" style="color:red">&lt;/body&gt;</span><br></span> 
+        <span class="phptagcolor" style="color:red">&lt;/html&gt;</span>
+      
+      </div>
+    </div>
+<h4>ผลลัพธ์</h4>
+<p><img src="pic/d7.jpg"></p>
+
+    <h4>สร้างไฟล์ adddata.php เพื่อรับค่าจากฟอร์มที่ส่งมาและทำการแทรกข้อมูลลงไปในตาราง </h4>
+    <p>คำสั่ง require("ชื่อไฟล์"); เป็นคำสั่งในการเรียกใช้ไฟล์หรือแทรกคำสั่งในไฟล์ที่เรียกใช้ เนื่องจากการจะเพิ่มข้อมูลลงในฐานข้อมูลจะต้องทำการเชื่อมต่อฐานข้อมูลก่อนจึงจะสามารถเพิ่มข้อมูลลงไปได้</p>
+    <p>สร้างตัวแปรเพื่อใช้รับค่าที่ส่งมาจาก form โดยอ้างอิงตาม name $product_id = $_POST['ProductID'];</p>
+    <p>ในการเพิ่มข้อมูลจะสร้างตัวแปรเพื่อเก็บค่าและคำสั่งในการเพิ่มไว้ในตัวแปร รูปแบบการใช้งาน</p>
+    <p>$ตัวแปรที่เก็บค่าและคำสั่ง = "Insert into <u>ชื่อตาราง</u>(ชื่อคอลัมน์ในตาราง,ชื่อคอลัมน์ในตาราง,ชื่อคอลัมน์ในตาราง) value('ตัวแปรที่รับค่ามาจาก form','ตัวแปรที่รับค่ามาจาก form','ตัวแปรที่รับค่ามาจาก form')";</p>
+    <p>ตัวอย่างการใช้งาน</p>
+    <li>$sql = "Insert into product_list(Product_ID,Product_NAME,Product_PRICE,Storage)value('$product_id','$product_name','$product_price','$product_storage')";</li>
+    <p>mysqli_query คือ การส่งคำสั่งที่ต้องการประมวลผลไปยัง Database โดยจะใช้ตัวแปรเพื่อเก็บคำสั่ง mysqli_query อีกทีเพื่อที่จะสามารถเช็คว่า query ที่ส่งไปยัง Database ทำงานสำเร็จหรือไม่ รูปแบบการใช้งาน</p>
+    <p>$ตัวแปรที่เก็บคำสั่ง = mysqli_query($ตัวแปรที่เก็บฟังก์ชันชื่อมต่อฐานข้อมูล,$ตัวแปรที่เก็บค่าและคำสั่ง);</p>
+    <p>ตัวอย่างการใช้งาน</p>
+    <li>$result = mysqli_query($con_nect,$sql);</li>
+    <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span> 
+      <br><span class="phpkeywordcolor" style="color:mediumblue">  require</span><span class="phpkeywordcolor" style="color:red">("connect.php")</span>;
+      <br>$product_id =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST</span><span class="phpkeywordcolor" style="color:red">['ProductID']</span>;
+      <br>$product_name =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST</span><span class="phpkeywordcolor" style="color:red">['ProductNAME']</span>;
+      <br>$product_price =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST</span><span class="phpkeywordcolor" style="color:red">['ProductPRICE']</span>;
+      <br>$product_storage =<span class="phpkeywordcolor" style="color:mediumblue">  $_POST</span><span class="phpkeywordcolor" style="color:red">['ProductSTORAGE']</span>;
+      <br><br>$sql = <span class="phpstringcolor" style="color:mediumblue">"Insert into product_list</span><span class="phpkeywordcolor" style="color:red">(Product_ID,Product_NAME,Product_PRICE,Storage)</span>
+      <br><span class="phpstringcolor" style="color:mediumblue">value(<span class="phpkeywordcolor" style="color:red">'$product_id'</span>,<span class="phpkeywordcolor" style="color:red">'$product_name'</span>,<span class="phpkeywordcolor" style="color:red">'$product_price'</span>,<span class="phpkeywordcolor" style="color:red">'$product_storage'</span>)"</span>;
+      
+     <br><br> $result=<span class="phpstringcolor" style="color:brown">mysqli_query</span><span class="phpkeywordcolor" style="color:red">(<span style="color:black">$con_nect,$sql</span>)</span>;
+     <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($result<span class="phpstringcolor" style="color:brown"></span>) {
+      <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Successfully"</span> ;
+      <br>}
+      <br><span class="phpkeywordcolor" style="color:mediumblue">else</span>{
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span><span class="phpstringcolor" style="color:brown">"eror check your Database and query "</span>;
+      <br>}
+      
+      
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div>
+<h4>เมื่อกดปุ่ม send ในหน้า form เพิ่มข้อมูลจะได้ผลลัพธ์</h4>
+<p><img src="pic/d8.jpg"></p>
+
+<br>  
+<h4>สร้าง form ในการแก้ไขข้อมูลในตาราง (Table)</h4>
+  <p>สร้างไฟล์ editform.php</p>
+  <p><span>จากคำสั่งในหน้าโชว์ข้อมูล &lt;a href="editform.phpid?=&lt;?=$result["Product_ID"]?>"Edit &lt;/a>คือการส่งค่าที่อยู่ในตารางซึ่งก็คือ Product_ID ไปยังไฟล์ที่กำหนด จึงสร้างตัวแปร $ID_Product=$_GET['Product_ID']; เพื่อรับค่าที่ส่งมาเก็บไปยังตัวแปร</p>
+  <p>ในส่วนของ input ที่มีการเพิ่มค่า value=&lt;?=$row['Product_ID']?&gt; เข้าไปนั้น เมื่อคลิกแก้ไขจะลิงค์มายังหน้าฟอร์มแก้ไขข้อมูล โดยการแสดงผลจะเอาค่าที่อยู่ในฐานข้อมูลมาเพื่อให้ทราบว่าในแถวนี้บันทึกข้อมูลอะไร</p>
+  <p>เมื่อแก้ไขข้อมูลใน form นี้จะส่งข้อมูลไปประมวลผลที่ไฟล์ update.php</p>  
+  <div class="examcode">
+    <div class="w3-exampl">
+    <span class="phptagcolor" style="color:red">&lt;?php</span> 
+    <br><span class="phpkeywordcolor" style="color:mediumblue">  require</span><span class="phpkeywordcolor" style="color:red">("connect.php")</span>;
+      <br>$ID_Product=<span class="phptagcolor" style="color:red">$_GET[<span class="phpkeywordcolor" style="color:mediumblue">'Product_ID'</span>]</span>;
+      <br>$sql= <span class="phptagcolor" style="color:red">"Select * from product_list Where <span class="phpkeywordcolor" style="color:mediumblue">Product_ID</span>=<span style="color:black">'$ID_Product'</span>"</span>;
+      <br>$result=<span class="phptagcolor" style="color:red">mysqli_query(<span style="color:black">$con_nect,$sql</span>)</span>;
+      <br>$row=<span class="phptagcolor" style="color:red">mysqli_fetch_array(<span style="color:black">$result</span>)</span>;
+
+    <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    <br><br><span class="phptagcolor" style="color:red">&lt;html&gt;</span><br></span> 
+    <span class="phptagcolor" style="color:red">&lt;body&gt;</span>
+    <br><span class="phpstringcolor" style="color:brown">&lt;form   <span class="phptagcolor" style="color:red">action</span><span class="phpkeywordcolor" style="color:mediumblue">="update.php"</span> <span class="phptagcolor" style="color:red">method</span><span class="phpkeywordcolor" style="color:mediumblue">="POST"</span>&gt;</span>
+    <br><span class="phpstringcolor" style="color:brown">&lt;table&gt;</span>
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product ID : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductID"</span> <span class="phptagcolor" style="color:red">maxlength  </span><span class="phpkeywordcolor" style="color:mediumblue">="5"</span> <span class="phptagcolor" style="color:red">value=</span><span class="phpkeywordcolor" style="color:mediumblue">&lt;?=$row[<span style="color:red">'Product_ID'</span>]?></span>&gt;</span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product Name : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductNAME"</span> <span class="phptagcolor" style="color:red">maxlength  </span><span class="phpkeywordcolor" style="color:mediumblue">="20"</span> <span class="phptagcolor" style="color:red">value=</span><span class="phpkeywordcolor" style="color:mediumblue">&lt;?=$row[<span style="color:red">'Product_NAME'</span>]?></span>&gt;</span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product Price : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductPRICE"</span> <span class="phptagcolor" style="color:red">maxlength  </span><span class="phpkeywordcolor" style="color:mediumblue">="4"</span> <span class="phptagcolor" style="color:red">value=</span><span class="phpkeywordcolor" style="color:mediumblue">&lt;?=$row[<span style="color:red">'Product_PRICE'</span>]?></span>&gt;</span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span>Product Storage : <span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="ProductSTORAGE"</span> <span class="phptagcolor" style="color:red">maxlength  </span><span class="phpkeywordcolor" style="color:mediumblue">="3"</span>  <span class="phptagcolor" style="color:red">value=</span><span class="phpkeywordcolor" style="color:mediumblue">&lt;?=$row[<span style="color:red">'Storage'</span>]?> </span>&gt;</span></span><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+        
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;tr&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;td&gt;</span><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="submit"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="Edit"</span> ><span class="phpstringcolor" style="color:brown">&lt;/td&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/tr&gt;</span>
+
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;/table&gt;
+        <br><span class="phpstringcolor" style="color:brown">&lt;/form&gt;
+        <br><br><span class="phptagcolor" style="color:red">&lt;/body&gt;</span><br></span> 
+        <span class="phptagcolor" style="color:red">&lt;/html&gt;</span>
+  </div>
+</div>
+<h4>เมื่อคลิก Edit ที่หน้าโชว์ข้อมูลที่อยู่ในตารางจะลิงค์มาที่ฟอร์มแก้ไข</h4>
+<h4>ผลลัพธ์</h4>
+<p><img src="pic/d9.jpg"></p>
+<p>ทำการแก้ไข Product Storage จาก 8 เป็น 10 </p>
+
+
+
+  <h4>สร้างไฟล์ update.php เพื่อรับค่าจากฟอร์มที่ส่งมาและทำการแก้ไขข้อมูลที่อยู่ในตาราง</h4>
+  <p>สร้างตัวแปรมารับค่าที่ส่งมาจาก form</p>
+  <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span> 
+      <br><span style="color:mediumblue">require</span><span style="color:red">("connect.php")</span>;
+      <br>$Product_ID <span style="color:mediumblue">=$_POST[<span style="color:red">'ProductID'</span>]</span>;
+      <br>$Product_Name <span style="color:mediumblue">=$_POST[<span style="color:red">'ProductNAME'</span>]</span>;
+      <br>$Product_Price <span style="color:mediumblue">=$_POST[<span style="color:red">'ProductPRICE'</span>]</span>;
+      <br>$Product_Storage <span style="color:mediumblue">=$_POST[<span style="color:red">'ProductSTORAGE'</span>]</span>;
+      <br>$sql =  <span style="color:mediumblue">"update <span style="color:brown">product_list</span> set <span style="color:brown">Product_ID=</span>'$Product_ID',<span style="color:brown">Product_NAME</span>='$Product_Name',<span style="color:brown">Product_PRICE</span>='$Product_Price',<span style="color:brown">Storage</span>='$Product_Storage' <br>where <span style="color:brown">Product_ID</span>='$Product_ID'"</span>;
+
+      <br><br> $result=<span class="phpstringcolor" style="color:brown">mysqli_query</span><span class="phpkeywordcolor" style="color:red">(<span style="color:black">$con_nect,$sql</span>)</span>;
+      <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($result<span class="phpstringcolor" style="color:brown"></span>) {
+       <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Edit Successfully"</span> ;
+       <br>}
+       <br><span class="phpkeywordcolor" style="color:mediumblue">else</span>{
+         <br><span class="phpkeywordcolor" style="color:mediumblue">print</span><span class="phpstringcolor" style="color:brown">"eror check your Database and query "</span>;
+       <br>}
+      
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div>
+  <h4>ผลลัพธ์เมื่อทำการคลิกปุ่ม Edit จะทำการแก้ไขข้อมูล และแสดงผล Edit Successfully</h4>
+<p><img src="pic/d10.jpg"></p>
+
+<br>
+<h4>สร้างไฟล์ deleteform.php</h4>
+    <div class="examcode">
+      <div class="w3-exampl">
+      
+      <span class="phptagcolor" style="color:red">&lt;?php</span> 
+      <br><span style="color:mediumblue">require</span><span style="color:red">("connect.php")</span>;
+      <br>$ID_Product=<span class="phptagcolor" style="color:red">$_GET[<span class="phpkeywordcolor" style="color:mediumblue">'Product_ID'</span>]</span>;
+        <br>$sql= <span class="phptagcolor" style="color:mediumblue">"delete from <span style="color:brown;">product_list</span> Where <span class="phpkeywordcolor" style="color:mediumblue">Product_ID</span>=<span style="color:black">'$ID_Product'</span>"</span>;
+        <br><br> $result=<span class="phpstringcolor" style="color:brown">mysqli_query</span><span class="phpkeywordcolor" style="color:red">(<span style="color:black">$con_nect,$sql</span>)</span>;
+        <br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($result<span class="phpstringcolor" style="color:brown"></span>) {
+         <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"Delete Successfully"</span> ;
+         <br>}
+         <br><span class="phpkeywordcolor" style="color:mediumblue">else</span>{
+           <br><span class="phpkeywordcolor" style="color:mediumblue">print</span><span class="phpstringcolor" style="color:brown">"eror check your Database and query "</span>;
+         <br>}
+      
+      
+      <br><span class="phptagcolor" style="color:red">?&gt;</span>
+    
+    </div>
+  </div>
+  <h4>เมื่อคลิก Delete ที่หน้าโชว์ข้อมูลที่อยู่ในตารางจะลิงค์มาที่ไฟล์ลบข้อมูล</h4>
+  <h4>ผลลัพธ์</h4>
+  <p><img src="pic/d11.jpg"></p>
+  <p>ทำการลบข้อมูล</p>
+
+  <br><h4>สร้าง form ในการค้นหาข้อมูลในตาราง (Table)</h4>
+  <p>สร้างไฟล์ searchform</p>
+  <p>สร้างหน้า form ในการค้นหาข้อมูลสินค้าโดยส่งข้อมูลไปยังไฟล์ searchdata.php</p>
+<div class="examcode">
+        <div class="w3-exampl">
+        <span class="phptagcolor" style="color:red">&lt;html&gt;</span>
+        <br><span class="phptagcolor" style="color:red">&lt;body&gt;</span> 
+        <br><br><span class="phpstringcolor" style="color:brown">&lt;form   <span class="phptagcolor" style="color:red">action</span><span class="phpkeywordcolor" style="color:mediumblue">="searchdata.php"</span> <span class="phptagcolor" style="color:red">method</span><span class="phpkeywordcolor" style="color:mediumblue">="POST"</span>&gt;</span>
+      <br><span class="phpstringcolor" style="color:brown">&lt;p&gt;</span>Search Product<span class="phpstringcolor" style="color:brown">&lt;/p&gt;</span>
+        <br><span class="phpstringcolor" style="color:brown"></span>  <span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="text"</span> <span class="phptagcolor" style="color:red">name</span><span class="phpkeywordcolor" style="color:mediumblue">="dataproduct"</span>&gt;</span>
+        
+        
+        <br><span class="phpstringcolor" style="color:brown">&lt;input   <span class="phptagcolor" style="color:red">type</span><span class="phpkeywordcolor" style="color:mediumblue">="submit"</span> <span class="phptagcolor" style="color:red">value</span><span class="phpkeywordcolor" style="color:mediumblue">="search"</span> ></span>
+        <br><span class="phpstringcolor" style="color:brown">&lt;/form &gt;
+        <br><br>
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;/body&gt;</span><br></span> 
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;/html&gt;</span><br></span>
+      
+      </div>
+    </div>
+    <h4>ผลลัพธ์</h4>
+    <p><img src="pic/d12.jpg"></p>
+    
+    <h4>สร้างไฟล์ searchdata.php เพื่อรับค่าจากฟอร์มที่ส่งมาและทำการค้นหาข้อมูลที่อยู่ในตาราง</h4>
+    <p>สร้างตัวแปรมารับค่าที่ส่งมาจาก form</p>
+    <div class="examcode">
+      <div class="w3-exampl">
+        <span class="phptagcolor" style="color:red">&lt;?php</span>
+        <br><span style="color:mediumblue">require</span><span style="color:red">("connect.php")</span>;
+        <br>$data=<span class="phptagcolor" style="color:red">$_POST[<span class="phpkeywordcolor" style="color:mediumblue">'dataproduct'</span>]</span>;
+        <br>$sql=<span class="phptagcolor" style="color:brown">"SELECT * FROM <span style="color:brown">product_list</span> WHERE Product_NAME LIKE <span style="color:red">'%$data%'</span> ORDER BY Product_ID"</span>;
+        <br>$query=<span class="phptagcolor" style="color:brown">mysqli_query($con_nect,$sql)</span>;
+        <br>$count=<span class="phptagcolor" style="color:brown">mysqli_num_rows($query)</span>;
+        <br><span class="phptagcolor" style="color:red">?&gt;</span>
+
+        
+        <br><br><span class="phptagcolor" style="color:red">&lt;html&gt;</span>
+        <br><span class="phptagcolor" style="color:red">&lt;body&gt;</span>
+        <br><span class="phptagcolor" style="color:red">&lt;?php</span> 
+        <br><span class="phptagcolor" style="color:mediumblue">if</span>($count>0)<span style="color:blueviolet">{</span>
+        <br><span class="phptagcolor" style="color:red">?></span> 
+          <br><br><span style="color:brown">&lt;table&gt;</span>
+          <br><span style="color:brown">&lt;tr&gt;</span>
+          <br><span style="color:brown">&lt;th&gt;</span>Product ID<span style="color:brown">&lt;/th&gt;</span>
+          <br><span style="color:brown">&lt;th&gt;</span>Product Name<span style="color:brown">&lt;/th&gt;</span> 
+          <br><span style="color:brown">&lt;th&gt;</span>Product Price<span style="color:brown">&lt;/th&gt;</span>
+          <br><span style="color:brown">&lt;th&gt;</span>Product Storage<span style="color:brown">&lt;/th&gt;</span>
+        <br><span style="color:brown">&lt;/tr&gt;</span>
+                       
+               
+            
+        <br><br><span class="phptagcolor" style="color:red">&lt;?php</span> 
+        <br><span class="phptagcolor" style="color:mediumblue">while</span><span style="color:brown">($result=mysqli_fetch_assoc<span style="color:mediumblue">($query)</span>)</span>
+        <br><span style="color:red">{</span>        
+        <br><span class="phptagcolor" style="color:red">?></span>       
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;tr <span class="phptagcolor" style="color:red">align="center"</span> &gt;</span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="150"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Product_ID"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="200"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Product_NAME"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="200"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Product_PRICE"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td <span class="phptagcolor" style="color:red">width="200"</span>&gt;</span><span class="phptagcolor" style="color:red">&lt;?=</span><span class="phpstringcolor" style="color:brown">$result[<span class="phptagcolor" style="color:blue">"Storage"</span>]<span class="phptagcolor" style="color:red">?&gt;</span> <span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; </span>
+        <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td&gt;</span><span style="color:red">&lt;a href="editform.php?Product_ID=&lt;?=$result["Product_ID"]?>">Edit &lt;/a></span><span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; 
+            <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;td&gt;</span><span style="color:red">&lt;a href="editform.php?Product_ID=&lt;?=$result["Product_ID"]?>">Delete &lt;/a></span><span class="phpkeywordcolor" style="color:mediumblue">&lt;/td&gt; 
+            <br><span class="phpkeywordcolor" style="color:mediumblue">&lt;/tr&gt;</span>
+          <br><span class="phptagcolor" style="color:red">&lt;?php</span>
+          <br><span style="color:red">}</span> &nbsp;<span style="color:darkgreen">//ปีกกาปิด while</span>        
+          <br><span class="phptagcolor" style="color:red">?></span>            
+          
+          <br><br><span style="color:brown">&lt;/tbody&gt;</span>           
+          <br><span style="color:brown">&lt;/table&gt;</span>       
+          <br><span class="phptagcolor" style="color:red">&lt;?php</span> 
+          <br><span style="color:blueviolet">}</span> &nbsp;<span style="color:darkgreen; font-family:'Prompt',sans-serif;">//ปีกกาปิด if</span>   
+          <br><span class="phptagcolor" style="color:mediumblue">else</span><span style="color:yellow">{</span> <span class="phptagcolor" style="color:red">?></span>  
+          <br><span>&lt;b&gt;Data Notfound&lt;/b&gt;</span>
+          <br><span class="phptagcolor" style="color:red">&lt;?php</span> <span style="color:yellow">}</span> <span style="color:darkgreen">//ปีกกาปิด else</span> <span class="phptagcolor" style="color:red">?></span>         
+                    
+          
+          <br><br><span class="phptagcolor" style="color:red">&lt;/body&gt;</span>       
+          <br><span class="phptagcolor" style="color:red">&lt;/html&gt;</span>
+       
+        
+        
+         
+          
+    </div>
+</div>
+<h4>ทำการเพิ่มข้อมูลลงไปเพื่อค้นหา</h4>
+<p><img src="pic/d14.jpg"></p>
+
+<h4>เปิดหน้าฟอร์มสำหรับค้นหา</h4>
+<p><img src="pic/d13.jpg"></p>
+<h4>ผลลัพธ์เมื่อคลิกปุ่ม search</h4>
+<p><img src="pic/d15.jpg"></p>
+</diV><!--ปิด div contentphp-->
+    </div><!--ปิด div content-->
+
+      <!--สิ้นสุดส่วนเนื้อหา-->
+      
+      
+   </body>
+</html>

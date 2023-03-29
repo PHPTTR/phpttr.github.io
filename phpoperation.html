@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="s.css">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt">
+    </head>
+   <body>
+    
+      
+      <!--ส่วนเนื้อหา-->
+    
+      <center><div class="namecontent">
+        <div class="headcontent">
+        <span class="php">PHP</span><span class="namephp">Opeation</span> 
+        </div>
+      </div>                   
+      </center>
+
+<div class="content">
+<diV class="contentphp"><h3>คำสั่งควบคุมทิศทางการทำงาน</h3>
+    <br>
+    
+    <h4>กรณีเงื่อนไขเดียว</h4>
+    <table>
+        <tr>
+            <th>คำสั่งควบคุมทิศทางการทำงาน</th>
+            <th>ตัวอย่าง</th>
+            <th>หลักการใช้</th>
+          </tr>
+         
+          <tr>
+            <td>if</td>
+            <td>if($a >= $b) { คำสั่ง }</td>
+            <td>กรณีเงื่อนไขเดียว</td>
+          </tr>
+          </table>
+      <br>
+          <p>คำสั่ง if ใช้เปรียบเทียบเงื่อนไขว่าเป็นจริงหรือเท็จ โดยมีการกำหนดคำสั่งที่ต้องการไว้ในบล็อกการทำงาน { } </p>  
+    
+    <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+        $x = <span class="phpstringcolor" style="color:red">20</span> ; 
+        
+        <br><br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($x >= <span class="phpstringcolor" style="color:red">10</span>) {
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"$x >= 10"</span> ;
+        <br>}
+        <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+      
+      </div>
+    </div>
+<br>
+<h4>กรณีสองเงื่อนไข</h4>
+<table>
+  <tr>
+      <th>คำสั่งควบคุมทิศทางการทำงาน</th>
+      <th>ตัวอย่าง</th>
+      <th>หลักการใช้</th>
+    </tr>
+   
+    <tr>
+      <td>if else</td>
+      <td>if($a >= $b) { คำสั่ง } else { คำสั่ง }</td>
+      <td>กรณีสองเงื่อนไข</td>
+    </tr>
+    </table>
+    <br>
+  <p>นำตัวแปรไปเปรียบเทียบในเงื่อนไขที่หนึ่งถ้าเป็นจริงจะทำตามคำสั่งในบล็อกของเงื่อนไขที่หนึ่ง if { } แต่ถ้าเป็นเท็จจะทำตามคำสั่งในบล็อกเงื่อนไขที่สอง else { } </p>
+    <div class="examcode">
+        <div class="w3-exampl">
+        
+        <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+        $x = <span class="phpstringcolor" style="color:red">20</span> ; 
+        
+        <br><br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($x >= <span class="phpstringcolor" style="color:red">15</span>) {
+        <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"$x >= 10"</span> ;
+        <br>}
+        <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> <span class="phpstringcolor" style="color:brown"></span> {
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"$x < 10"</span> ;
+          <br>}
+        <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+      
+      </div>
+    </div>
+    <h4>กรณีหลายเงื่อนไข</h4>
+    <table>
+  <tr>
+      <th>คำสั่งควบคุมทิศทางการทำงาน</th>
+      <th>ตัวอย่าง</th>
+      <th>หลักการใช้</th>
+    </tr>
+   
+    <tr>
+      <td>if elseif else</td>
+      <td>if($a >= $b){ คำสั่ง } elseif($a >= $b) { คำสั่ง } else { คำสั่ง } </td>
+      <td>กรณีมากกว่าสองเงื่อนไข</td>
+    </tr>
+    </table>
+    <br>
+    <p>เปรียบเทียบเงื่อนไขที่หนึ่งถ้าเป็นจริงจะทำตามคำสั่งในบล็อกของเงื่อนไขที่หนึ่ง if { } ถ้าเป็นเท็จจะไปเปรียบเทียบเงื่อนไขที่สอง
+    <br>เปรียบเทียบเงื่อนไขที่สองถ้าเป็นจริงจะทำตามคำสั่งในบล็อกเงื่อนไขที่สอง else if { } แต่ถ้าเป็นเท็จจะทำตามคำสั่งในบล็อกเงื่อนไขที่สาม else { }</p>
+      <div class="examcode">
+          <div class="w3-exampl">
+          
+          <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+          $x = <span class="phpstringcolor" style="color:red">20</span> ; 
+          
+          <br><br><span class="phpkeywordcolor" style="color:mediumblue">if</span> ($x >= <span class="phpstringcolor" style="color:red">15</span>) {
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"$x >= 15"</span> ;
+          <br>}
+          <br><span class="phpkeywordcolor" style="color:mediumblue">elseif</span> ($x >= <span class="phpstringcolor" style="color:red">10</span>) {
+            <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"$x >= 10"</span> ;
+            <br>}
+            <br><span class="phpkeywordcolor" style="color:mediumblue">else</span> {
+              <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"$x < 10"</span> ;
+              <br>}
+            <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+        
+        </div>
+      </div>
+      <h4>คำสั่ง switch</h4>
+      <table>
+  <tr>
+      <th>คำสั่งควบคุมทิศทางการทำงาน</th>
+      <th>ตัวอย่าง</th>
+      <th>หลักการใช้</th>
+    </tr>
+   
+    <tr>
+      <td>switch</td>
+      <td>switch($a)</td>
+      <td>ใช้คำสั่ง switch เพื่อนำตัวแปรไปเปรียบเทียบในแต่ละ case</td>
+    </tr>
+
+    <tr>
+      <td>case</td>
+      <td>case "red"</td>
+      <td>ใช้คำสั่ง case เพื่อสร้างเงื่อนไขในการนำตัวแปรมาเปรียบเทียบ</td>
+    </tr>
+
+    <tr>
+      <td>break</td>
+      <td>break ;</td>
+      <td>คำสั่ง break เป็นการสั่งให้โปรแกรมออกจากคำสั่ง switch หากเจอเงื่อนไขแล้ว</td>
+    </tr>
+
+    <tr>
+      <td>default</td>
+      <td>default :</td>
+      <td>คำสั่ง default กำหนดการทำงาน ในกรณีไม่เข้าเงื่อนไขใด ๆ ของเงื่อนไขในแต่ละ case</td>
+    </tr>
+    </table>
+    
+    <div class="examcode">
+          <div class="w3-exampl">
+          
+          <span class="marked"><span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br><span class="phpnumbercolor" style="color:red"></span> 
+          $color = <span class="phpstringcolor" style="color:red">"red"</span> ; 
+          
+          <br><br><span class="phpkeywordcolor" style="color:mediumblue">switch</span> ($color<span class="phpstringcolor" style="color:brown"></span>) {
+          <br><span class="phpkeywordcolor" style="color:mediumblue">case</span> <span class="phpstringcolor" style="color:red">"blue"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"color is blue"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">break</span> ;
+          <br>
+          <br><span class="phpkeywordcolor" style="color:mediumblue">case</span> <span class="phpstringcolor" style="color:red">"green"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"color is green"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">break</span> ;
+          
+          <br>
+          <br><span class="phpkeywordcolor" style="color:mediumblue">case</span> <span class="phpstringcolor" style="color:red">"red"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"color is red"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">break</span> ;
+          
+          <br>
+          <br><span class="phpkeywordcolor" style="color:mediumblue">case</span> <span class="phpstringcolor" style="color:red">"yellow"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"color is yellow"</span> ;
+          <br><span class="phpkeywordcolor" style="color:mediumblue">break</span> ;
+          
+          <br>
+          <br><span class="phpkeywordcolor" style="color:mediumblue">default</span> <span class="phpstringcolor" style="color:brown"></span> :
+          <br><span class="phpkeywordcolor" style="color:mediumblue">print</span> <span class="phpstringcolor" style="color:brown">"no color"</span> ;
+          <br>}
+          <br><span class="phptagcolor" style="color:red">?&gt;</span></span></span>
+        
+        </div>
+      </div>
+
+</diV><!--ปิด div contentphp-->
+    </div><!--ปิด div content-->
+
+      <!--สิ้นสุดส่วนเนื้อหา-->
+      
+      
+   </body>
+</html>
